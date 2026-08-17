@@ -15,9 +15,9 @@ export type AppointmentRequest = {
   service: string;
   date1: string;
   slot1: string;
-  date2?: string;
-  slot2?: string;
-  message?: string;
+  date2?: string | undefined;
+  slot2?: string | undefined;
+  message?: string | undefined;
   photoName?: string | null;
 };
 
