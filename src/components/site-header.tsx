@@ -27,13 +27,16 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const isHome = pathname === "/";
+  const overlay = isHome && !scrolled && !open;
+
   return (
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-700",
-        scrolled || open
-          ? "border-b border-border/60 bg-background/90 backdrop-blur-md"
-          : "bg-transparent",
+        overlay
+          ? "bg-transparent text-primary-foreground"
+          : "border-b border-border/60 bg-background/90 text-foreground backdrop-blur-md",
       )}
     >
       <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 md:px-10 md:py-5">
@@ -41,7 +44,12 @@ export function SiteHeader() {
           <span className="block truncate font-display text-xl tracking-[0.18em] uppercase sm:text-2xl">
             {site.name}
           </span>
-          <span className="mt-0.5 hidden text-[0.6rem] tracking-[0.3em] text-muted-foreground uppercase sm:block">
+          <span
+            className={cn(
+              "mt-0.5 hidden text-[0.6rem] tracking-[0.3em] uppercase sm:block",
+              overlay ? "text-primary-foreground/75" : "text-muted-foreground",
+            )}
+          >
             {site.tagline}
           </span>
         </Link>
@@ -52,18 +60,29 @@ export function SiteHeader() {
               key={item.to}
               to={item.to}
               activeOptions={{ exact: item.to === "/" }}
-              className="text-[0.7rem] tracking-[0.22em] text-muted-foreground uppercase transition-colors hover:text-foreground data-[status=active]:text-foreground"
+              className={cn(
+                "text-[0.7rem] tracking-[0.22em] uppercase transition-colors",
+                overlay
+                  ? "text-primary-foreground/80 hover:text-primary-foreground data-[status=active]:text-primary-foreground"
+                  : "text-muted-foreground hover:text-foreground data-[status=active]:text-foreground",
+              )}
             >
               {item.label}
             </Link>
           ))}
           <Link
             to="/rendez-vous"
-            className="border border-foreground/70 px-5 py-2.5 text-[0.7rem] tracking-[0.22em] uppercase transition-colors hover:bg-foreground hover:text-primary-foreground"
+            className={cn(
+              "border px-5 py-2.5 text-[0.7rem] tracking-[0.22em] uppercase transition-colors",
+              overlay
+                ? "border-primary-foreground/60 hover:bg-primary-foreground/15"
+                : "border-foreground/70 hover:bg-foreground hover:text-primary-foreground",
+            )}
           >
             Prendre rendez-vous
           </Link>
         </nav>
+
 
         <button
           type="button"
