@@ -11,8 +11,11 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AProposRouteImport } from './routes/a-propos'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
 import { Route as PrestationsRouteImport } from './routes/prestations'
 import { Route as RealisationsRouteImport } from './routes/realisations'
+import { Route as RendezVousRouteImport } from './routes/rendez-vous'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,6 +25,16 @@ const IndexRoute = IndexRouteImport.update({
 const AProposRoute = AProposRouteImport.update({
   id: '/a-propos',
   path: '/a-propos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MentionsLegalesRoute = MentionsLegalesRouteImport.update({
+  id: '/mentions-legales',
+  path: '/mentions-legales',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrestationsRoute = PrestationsRouteImport.update({
@@ -34,39 +47,78 @@ const RealisationsRoute = RealisationsRouteImport.update({
   path: '/realisations',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RendezVousRoute = RendezVousRouteImport.update({
+  id: '/rendez-vous',
+  path: '/rendez-vous',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/contact': typeof ContactRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
   '/prestations': typeof PrestationsRoute
   '/realisations': typeof RealisationsRoute
+  '/rendez-vous': typeof RendezVousRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/contact': typeof ContactRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
   '/prestations': typeof PrestationsRoute
   '/realisations': typeof RealisationsRoute
+  '/rendez-vous': typeof RendezVousRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/contact': typeof ContactRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
   '/prestations': typeof PrestationsRoute
   '/realisations': typeof RealisationsRoute
+  '/rendez-vous': typeof RendezVousRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/a-propos' | '/prestations' | '/realisations'
+  fullPaths:
+    | '/'
+    | '/a-propos'
+    | '/contact'
+    | '/mentions-legales'
+    | '/prestations'
+    | '/realisations'
+    | '/rendez-vous'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/a-propos' | '/prestations' | '/realisations'
-  id: '__root__' | '/' | '/a-propos' | '/prestations' | '/realisations'
+  to:
+    | '/'
+    | '/a-propos'
+    | '/contact'
+    | '/mentions-legales'
+    | '/prestations'
+    | '/realisations'
+    | '/rendez-vous'
+  id:
+    | '__root__'
+    | '/'
+    | '/a-propos'
+    | '/contact'
+    | '/mentions-legales'
+    | '/prestations'
+    | '/realisations'
+    | '/rendez-vous'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AProposRoute: typeof AProposRoute
+  ContactRoute: typeof ContactRoute
+  MentionsLegalesRoute: typeof MentionsLegalesRoute
   PrestationsRoute: typeof PrestationsRoute
   RealisationsRoute: typeof RealisationsRoute
+  RendezVousRoute: typeof RendezVousRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -85,6 +137,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AProposRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mentions-legales': {
+      id: '/mentions-legales'
+      path: '/mentions-legales'
+      fullPath: '/mentions-legales'
+      preLoaderRoute: typeof MentionsLegalesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/prestations': {
       id: '/prestations'
       path: '/prestations'
@@ -99,14 +165,24 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RealisationsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/rendez-vous': {
+      id: '/rendez-vous'
+      path: '/rendez-vous'
+      fullPath: '/rendez-vous'
+      preLoaderRoute: typeof RendezVousRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AProposRoute: AProposRoute,
+  ContactRoute: ContactRoute,
+  MentionsLegalesRoute: MentionsLegalesRoute,
   PrestationsRoute: PrestationsRoute,
   RealisationsRoute: RealisationsRoute,
+  RendezVousRoute: RendezVousRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
