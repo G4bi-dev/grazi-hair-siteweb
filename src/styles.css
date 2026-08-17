@@ -209,6 +209,6 @@
     to top,
     color-mix(in oklab, var(--espresso) 72%, transparent) 0%,
     color-mix(in oklab, var(--espresso) 42%, transparent) 45%,
-    color-mix(in oklab, var(--espresso) 30%, transparent) 100%
+    color-mix(in oklab, var(--espresso) 46%, transparent) 100%
   );
 }

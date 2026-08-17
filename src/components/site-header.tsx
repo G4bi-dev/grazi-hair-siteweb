@@ -63,7 +63,7 @@ export function SiteHeader() {
               className={cn(
                 "text-[0.7rem] tracking-[0.22em] uppercase transition-colors",
                 overlay
-                  ? "text-primary-foreground/80 hover:text-primary-foreground data-[status=active]:text-primary-foreground"
+                  ? "text-primary-foreground/90 hover:text-primary-foreground data-[status=active]:text-primary-foreground"
                   : "text-muted-foreground hover:text-foreground data-[status=active]:text-foreground",
               )}
             >
