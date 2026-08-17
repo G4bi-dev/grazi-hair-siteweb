@@ -202,3 +202,13 @@
     transition: none;
   }
 }
+
+/* Voile sombre sur l'image du hero pour garantir la lisibilité du texte */
+@utility hero-veil {
+  background: linear-gradient(
+    to top,
+    color-mix(in oklab, var(--espresso) 72%, transparent) 0%,
+    color-mix(in oklab, var(--espresso) 42%, transparent) 45%,
+    color-mix(in oklab, var(--espresso) 30%, transparent) 100%
+  );
+}

@@ -62,7 +62,7 @@ function HomePage() {
           height={1920}
           className="absolute inset-0 h-full w-full object-cover object-[60%_center]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-espresso/55 via-espresso/15 to-espresso/25" />
+        <div className="hero-veil absolute inset-0" />
         <div className="relative mx-auto flex min-h-[92svh] max-w-7xl flex-col justify-end px-5 pt-32 pb-28 md:px-10 md:pb-24">
           <Reveal className="max-w-2xl">
             <p className="text-[0.65rem] tracking-[0.32em] text-primary-foreground/80 uppercase">
