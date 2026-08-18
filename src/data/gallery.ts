@@ -44,7 +44,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "g3",
     src: g3,
-    alt: "Coloration châtain caramel avec reflets sur cheveux ondulés",
+    alt: "Coloration cuivrée chaude avec reflets sur cheveux longs bouclés",
     category: "Coloration",
     ratio: "portrait",
   },
