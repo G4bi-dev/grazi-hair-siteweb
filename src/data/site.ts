@@ -9,12 +9,12 @@ export const site = {
   baseline:
     "L'art du blond lumineux et des couleurs sur-mesure, pensé pour révéler votre naturel.",
   contact: {
-    phone: "+00 000 00 00 00", // à remplacer
-    email: "contact@grazihair.com", // à remplacer
-    address: "Adresse à compléter", // à remplacer
-    city: "Ville, Pays",
-    instagram: "https://instagram.com/grazihair", // à remplacer
-    instagramHandle: "@grazihair",
+    phone: "+32 455 198 283",
+    email: "",
+    address: "Bruxelles",
+    city: "Belgique",
+    instagram: "https://instagram.com/GRAZIHAIR01",
+    instagramHandle: "@GRAZIHAIR01",
     whatsapp: "https://wa.me/00000000000", // à remplacer
     mapsQuery: "Adresse à compléter",
   },
