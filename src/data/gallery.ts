@@ -1,9 +1,9 @@
 import g1 from "@/assets/gallery-1.jpg";
+import g2 from "@/assets/gallery-2.jpg";
 import g3 from "@/assets/gallery-3.jpg";
 import g4 from "@/assets/gallery-4.jpg";
 import g5 from "@/assets/gallery-5.jpg";
 import g6 from "@/assets/gallery-6.jpg";
-import after from "@/assets/after.jpg";
 
 export const galleryCategories = [
   "Tout",
@@ -36,8 +36,8 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "g2",
-    src: after,
-    alt: "Balayage blond miel sur cheveux longs ondulés",
+    src: g2,
+    alt: "Balayage blond lumineux sur cheveux longs et ondulés",
     category: "Balayage",
     ratio: "tall",
   },
