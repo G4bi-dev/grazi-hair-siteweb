@@ -12,7 +12,7 @@ export const Route = createFileRoute("/a-propos")({
       {
         name: "description",
         content:
-          "Découvrez Grazi, coiffeuse indépendante spécialisée en balayage, mèches blondes et coloration : parcours, philosophie et approche personnalisée.",
+          "Coiffeuse depuis plus de 20 ans, Grazi accompagne chaque cliente avec expérience, précision et passion.",
       },
       { property: "og:title", content: "À propos — Grazi Hair" },
       {
@@ -50,8 +50,7 @@ function AProposPage() {
           <div className="space-y-6 text-sm leading-relaxed text-muted-foreground sm:text-base">
             <Reveal>
               <p className="text-foreground">
-                Texte de présentation à personnaliser. Quelques lignes sur votre parcours,
-                vos formations et ce qui vous a menée vers la couleur.
+                Coiffeuse depuis plus de 20 ans, Grazi accompagne chaque cliente avec expérience, précision et passion.
               </p>
             </Reveal>
             <Reveal delay={80}>
