@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import portraitImg from "@/assets/portrait.jpg";
-import detailImg from "@/assets/gallery-1.jpg";
+import detailImg from "@/assets/details-2.jpg";
 import { PageHeader } from "@/components/page-header";
 import { Reveal } from "@/components/reveal";
 import { expertise, site } from "@/data/site";
