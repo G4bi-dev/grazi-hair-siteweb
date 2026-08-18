@@ -137,7 +137,7 @@ function HomePage() {
         <SectionHeading
           eyebrow="Réalisations"
           title="Une galerie de blonds et de couleurs"
-          intro="Balayage, mèches, blond et coloration sur mesure : chaque couleur est pensée selon votre carnation, votre style et la nature de vos cheveux."
+          intro={"Balayage, mèches, blond et coloration sur mesure. \u00a0\nChaque couleur est pensée selon votre carnation, votre style et la nature de vos cheveux."}
         />
         <div className="mt-14">
           <GalleryGrid items={galleryItems.slice(0, 6)} withFilters={false} />
@@ -187,10 +187,10 @@ function HomePage() {
               intro="Coiffeuse depuis plus de 20 ans, Grazi accompagne chaque cliente avec expérience, précision et passion."
             />
             <Reveal delay={120}>
-              <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
-                Spécialisée dans le balayage, les mèches blondes et la coloration, je
-                travaille chaque chevelure comme une pièce unique, avec une attention
-                particulière portée à la santé de la fibre.
+              <p className="mt-6 text-sm leading-relaxed text-muted-foreground whitespace-pre-line">
+                Spécialisée en colorations et transformations capillaires, je travaille chaque chevelure comme une pièce unique, avec une attention particulière portée à la santé de la fibre.
+
+                Mon objectif : créer un résultat qui vous ressemble, tout en respectant la santé et la beauté de vos cheveux.
               </p>
               <Link
                 to="/a-propos"
@@ -209,7 +209,7 @@ function HomePage() {
           <Reveal>
             <p className="eyebrow">Rendez-vous</p>
             <h2 className="mt-5 text-3xl leading-tight sm:text-4xl md:text-5xl">
-              Prête pour votre nouveau blond ?
+              Prête pour une transformation ?
             </h2>
             <p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">
               Envoyez votre demande en quelques étapes : vous serez recontactée pour
