@@ -1,9 +1,9 @@
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
-import g4 from "@/assets/gallery-4.jpg";
-import g5 from "@/assets/gallery-5.jpg";
-import g6 from "@/assets/gallery-6.jpg";
+import blond from "@/assets/blond.jpg";
+import meches from "@/assets/meches.jpg";
+import details1 from "@/assets/details-1.jpg";
+import details2 from "@/assets/details-2.jpg";
+import balayage from "@/assets/gallery-2.jpg";
+import coloration from "@/assets/after.jpg";
 
 export const galleryCategories = [
   "Tout",
@@ -28,45 +28,45 @@ export type GalleryItem = {
 /** Ajouter simplement de nouvelles entrées ici pour enrichir la galerie. */
 export const galleryItems: GalleryItem[] = [
   {
-    id: "g1",
-    src: g1,
-    alt: "Détail de cheveux blonds lumineux avec balayage doré",
-    category: "Détails",
+    id: "blond",
+    src: blond,
+    alt: "Blond polaire lumineux sur cheveux mi-longs ondulés",
+    category: "Blond",
     ratio: "portrait",
   },
   {
-    id: "g2",
-    src: g2,
+    id: "balayage",
+    src: balayage,
     alt: "Balayage blond lumineux sur cheveux longs et ondulés",
     category: "Balayage",
     ratio: "tall",
   },
   {
-    id: "g3",
-    src: g3,
-    alt: "Coloration cuivrée chaude avec reflets sur cheveux longs bouclés",
-    category: "Coloration",
+    id: "meches",
+    src: meches,
+    alt: "Mèches blondes fines et fondues sur cheveux longs lissés",
+    category: "Mèches",
     ratio: "portrait",
   },
   {
-    id: "g4",
-    src: g4,
-    alt: "Travail de mèches blondes en cours au salon",
-    category: "Mèches",
-    ratio: "landscape",
+    id: "details-1",
+    src: details1,
+    alt: "Coloration cuivrée intense au reflet brillant après coiffage",
+    category: "Détails",
+    ratio: "portrait",
   },
   {
-    id: "g5",
-    src: g5,
-    alt: "Intérieur de salon minimaliste aux tons ivoire",
-    category: "Détails",
+    id: "coloration",
+    src: coloration,
+    alt: "Coloration ombré blond sur cheveux longs bouclés",
+    category: "Coloration",
     ratio: "tall",
   },
   {
-    id: "g6",
-    src: g6,
-    alt: "Détail de tresse blonde aux reflets champagne",
-    category: "Blond",
+    id: "details-2",
+    src: details2,
+    alt: "Détail du travail de lissage mèche par mèche au salon",
+    category: "Détails",
     ratio: "landscape",
   },
 ];
