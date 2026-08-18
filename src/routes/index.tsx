@@ -69,8 +69,8 @@ function HomePage() {
               {site.tagline}
             </p>
             <h1 className="mt-6 font-display text-[2.6rem] leading-[1.05] text-primary-foreground sm:text-6xl md:text-7xl">
-              L'art du blond,
-              <span className="block italic">pensé pour vous</span>
+              La couleur
+              <span className="block italic text-primary-foreground/90">qui vous ressemble</span>
             </h1>
             <p className="mt-7 max-w-md text-sm leading-relaxed text-primary-foreground/85 sm:text-base">
               {site.baseline}
@@ -137,7 +137,7 @@ function HomePage() {
         <SectionHeading
           eyebrow="Réalisations"
           title="Une galerie de blonds et de couleurs"
-          intro="Balayages fondus, blonds lumineux, mèches et colorations profondes."
+          intro="Balayage, mèches, blond et coloration sur mesure : chaque couleur est pensée selon votre carnation, votre style et la nature de vos cheveux."
         />
         <div className="mt-14">
           <GalleryGrid items={galleryItems.slice(0, 6)} withFilters={false} />
@@ -184,7 +184,7 @@ function HomePage() {
             <SectionHeading
               eyebrow="À propos"
               title="Bonjour, je suis Grazi"
-              intro="Texte de présentation à personnaliser : parcours, formations et philosophie. Mon approche est simple : un diagnostic précis, une écoute attentive et une couleur qui vous ressemble."
+              intro="Coiffeuse depuis plus de 20 ans, Grazi accompagne chaque cliente avec expérience, précision et passion."
             />
             <Reveal delay={120}>
               <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
