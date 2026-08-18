@@ -83,10 +83,37 @@ export const services: Service[] = [
     category: "Coloration",
   },
   {
-    id: "soin-coupe",
-    name: "Soin profond & coupe",
+    id: "ombre-hair",
+    name: "Ombré Hair",
     description:
-      "Rituel de soin reconstructeur, coupe et coiffage pour sublimer la matière.",
+      "Dégradé subtil de racines à pointes pour un effet naturel, sophistiqué et facile à entretenir.",
+    duration: "À confirmer",
+    price: "Sur devis",
+    category: "Coloration",
+  },
+  {
+    id: "correction-couleur",
+    name: "Correction de couleur",
+    description:
+      "Correction technique des accidents de couleur : bouchés, bandes, reflets indésirables ou cheveux trop clairs.",
+    duration: "À confirmer",
+    price: "Sur devis",
+    category: "Coloration",
+  },
+  {
+    id: "lissage-bresilien",
+    name: "Lissage brésilien",
+    description:
+      "Lissage semi-permanent à la kératine pour discipliner la fibre, réduire le volume et sublimer la brillance.",
+    duration: "À confirmer",
+    price: "Sur devis",
+    category: "Soin & coupe",
+  },
+  {
+    id: "botox-capillaire",
+    name: "Botox capillaire",
+    description:
+      "Soin profond réparateur qui nourrit, restructure et illumine les cheveux abîmés ou ternes.",
     duration: "À confirmer",
     price: "Sur devis",
     category: "Soin & coupe",
