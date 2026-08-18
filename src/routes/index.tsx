@@ -103,7 +103,7 @@ function HomePage() {
         <ul className="mt-16 grid gap-10 md:grid-cols-3 md:gap-14">
           {expertise.map((item, i) => (
             <Reveal as="li" key={item.title} delay={i * 120}>
-              <p className="font-display text-5xl text-nude">0{i + 1}</p>
+              <p className="font-display text-5xl text-espresso">0{i + 1}</p>
               <h3 className="mt-5 text-2xl">{item.title}</h3>
               <div className="rule-gold mt-5" />
               <p className="mt-5 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
