@@ -1,4 +1,7 @@
 import colorationAsset from "@/assets/coloration.jpg.asset.json";
+import meches2Asset from "@/assets/meches-2.jpg.asset.json";
+import brunIllumineAsset from "@/assets/brun-illumine.jpg.asset.json";
+import darkChocolatAsset from "@/assets/dark-chocolat.jpg.asset.json";
 import blond from "@/assets/blond.jpg";
 import meches from "@/assets/meches.jpg";
 import details1 from "@/assets/details-1.jpg";
@@ -10,6 +13,8 @@ export const galleryCategories = [
   "Balayage",
   "Blond",
   "Mèches",
+  "Brun Illuminé",
+  "Dark Chocolat",
   "TRANSFORMATION",
   "LISSAGE BRÉSILIEN",
   "Coloration",
