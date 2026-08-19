@@ -10,8 +10,9 @@ export const galleryCategories = [
   "Balayage",
   "Blond",
   "Mèches",
+  "TRANSFORMATION",
+  "LISSAGE BRÉSILIEN",
   "Coloration",
-  "Détails",
 ] as const;
 
 export type GalleryCategory = (typeof galleryCategories)[number];
@@ -52,21 +53,21 @@ export const galleryItems: GalleryItem[] = [
     id: "details-1",
     src: details1,
     alt: "Coloration cuivrée intense au reflet brillant après coiffage",
-    category: "Détails",
+    category: "Coloration",
     ratio: "portrait",
   },
   {
     id: "coloration",
     src: colorationAsset.url,
     alt: "Coloration cuivrée chaude avec reflets sur cheveux longs ondulés",
-    category: "Coloration",
+    category: "TRANSFORMATION",
     ratio: "tall",
   },
   {
     id: "details-2",
     src: details2,
     alt: "Détail du travail de lissage mèche par mèche au salon",
-    category: "Détails",
+    category: "LISSAGE BRÉSILIEN",
     ratio: "landscape",
   },
 ];

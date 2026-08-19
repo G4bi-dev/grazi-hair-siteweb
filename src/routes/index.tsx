@@ -184,11 +184,11 @@ function HomePage() {
             <SectionHeading
               eyebrow="À propos"
               title="Bonjour, je suis Grazi"
-              intro="Coiffeuse depuis plus de 20 ans, Grazi accompagne chaque cliente avec expérience, précision et passion."
+              intro="Coiffeuse depuis plus de 20 ans, j'accompagne chaque cliente avec expérience, précision et passion."
             />
             <Reveal delay={120}>
               <p className="mt-6 text-sm leading-relaxed text-muted-foreground whitespace-pre-line">
-                Spécialisée en colorations et transformations capillaires, je travaille chaque chevelure comme une pièce unique, avec une attention particulière portée à la santé de la fibre.
+                Spécialisée en colorations et transformations capillaires, je travaille chaque chevelure comme une pièce unique, avec une attention particulière portée à la santé de la fibre. 
 
                 Mon objectif : créer un résultat qui vous ressemble, tout en respectant la santé et la beauté de vos cheveux.
               </p>
