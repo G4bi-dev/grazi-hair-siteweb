@@ -1,9 +1,9 @@
+import colorationAsset from "@/assets/coloration.jpg.asset.json";
 import blond from "@/assets/blond.jpg";
 import meches from "@/assets/meches.jpg";
 import details1 from "@/assets/details-1.jpg";
 import details2 from "@/assets/details-2.jpg";
 import balayage from "@/assets/gallery-2.jpg";
-import coloration from "@/assets/after.jpg";
 
 export const galleryCategories = [
   "Tout",
