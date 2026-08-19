@@ -12,7 +12,7 @@ export const Route = createFileRoute("/a-propos")({
       {
         name: "description",
         content:
-          "Coiffeuse depuis plus de 20 ans, Grazi accompagne chaque cliente avec expérience, précision et passion.",
+          "Coiffeuse depuis plus de 20 ans, j'accompagne chaque cliente avec expérience, précision et passion.",
       },
       { property: "og:title", content: "À propos — Grazi Hair" },
       {
@@ -50,7 +50,7 @@ function AProposPage() {
           <div className="space-y-6 text-sm leading-relaxed text-muted-foreground sm:text-base">
             <Reveal>
               <p className="text-foreground">
-                Coiffeuse depuis plus de 20 ans, Grazi accompagne chaque cliente avec expérience, précision et passion.
+                Coiffeuse depuis plus de 20 ans, j'accompagne chaque cliente avec expérience, précision et passion.
               </p>
             </Reveal>
             <Reveal delay={80}>
