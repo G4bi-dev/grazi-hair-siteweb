@@ -9,10 +9,16 @@ import {
 import { cn } from "@/lib/utils";
 import { Reveal } from "./reveal";
 
+/*
+ * Mobile : on conserve les proportions naturelles de chaque photo.
+ * Desktop (md+) : grille éditoriale parfaitement régulière — toutes les
+ * cellules partagent le même ratio portrait, les images remplissent leur
+ * zone via object-cover. Plus de col-span/row-span : plus de trous.
+ */
 const ratioClass: Record<GalleryItem["ratio"], string> = {
-  portrait: "aspect-[4/5]",
-  landscape: "aspect-[4/3] md:col-span-2",
-  tall: "aspect-[3/4] md:row-span-2 md:aspect-[3/4.6]",
+  portrait: "aspect-[4/5] md:aspect-[4/5]",
+  landscape: "aspect-[4/3] md:aspect-[4/5]",
+  tall: "aspect-[3/4] md:aspect-[4/5]",
 };
 
 export function GalleryGrid({
