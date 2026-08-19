@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
-import portraitImg from "@/assets/portrait.jpg";
+import portraitAsset from "@/assets/grazi.jpg.asset.json";
 import { GalleryGrid } from "@/components/gallery-grid";
 import { BeforeAfter } from "@/components/before-after";
 import { Reveal } from "@/components/reveal";
@@ -172,7 +172,7 @@ function HomePage() {
         <div className="grid items-center gap-12 md:grid-cols-2 md:gap-20">
           <Reveal className="media-zoom order-1 md:order-none">
             <img
-              src={portraitImg}
+              src={portraitAsset.url}
               alt="Portrait de la coiffeuse dans son salon lumineux"
               loading="lazy"
               width={1200}
