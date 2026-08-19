@@ -75,4 +75,25 @@ export const galleryItems: GalleryItem[] = [
     category: "LISSAGE BRÉSILIEN",
     ratio: "landscape",
   },
+  {
+    id: "meches-2",
+    src: meches2Asset.url,
+    alt: "Mèches blondes fondues sur base brune, boucles souples en pointes",
+    category: "Mèches",
+    ratio: "portrait",
+  },
+  {
+    id: "brun-illumine",
+    src: brunIllumineAsset.url,
+    alt: "Brun illuminé de reflets blonds sur cheveux longs ondulés",
+    category: "Brun Illuminé",
+    ratio: "tall",
+  },
+  {
+    id: "dark-chocolat",
+    src: darkChocolatAsset.url,
+    alt: "Coloration brun chocolat profond et brillant avec boucles travaillées",
+    category: "Dark Chocolat",
+    ratio: "portrait",
+  },
 ];
