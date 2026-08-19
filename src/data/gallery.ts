@@ -57,8 +57,8 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "coloration",
-    src: coloration,
-    alt: "Coloration ombré blond sur cheveux longs bouclés",
+    src: colorationAsset.url,
+    alt: "Coloration cuivrée chaude avec reflets sur cheveux longs ondulés",
     category: "Coloration",
     ratio: "tall",
   },
