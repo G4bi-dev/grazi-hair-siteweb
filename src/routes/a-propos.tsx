@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import portraitImg from "@/assets/portrait.jpg";
+import portraitAsset from "@/assets/grazi.jpg.asset.json";
 import detailImg from "@/assets/details-2.jpg";
 import { PageHeader } from "@/components/page-header";
 import { Reveal } from "@/components/reveal";
@@ -38,7 +38,7 @@ function AProposPage() {
         <div className="grid gap-12 md:grid-cols-[0.9fr_1.1fr] md:gap-20">
           <Reveal className="media-zoom">
             <img
-              src={portraitImg}
+              src={portraitAsset.url}
               alt="Portrait de Grazi, coiffeuse coloriste"
               loading="lazy"
               width={1200}
