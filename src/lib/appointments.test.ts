@@ -1,7 +1,8 @@
-import { test, expect } from "bun:test";
+import { test, expect, mock } from "bun:test";
 import {
   appointmentWhatsappUrl,
   buildAppointmentMessage,
+  openWhatsAppUrl,
   type AppointmentRequest,
 } from "@/lib/appointments";
 
@@ -54,4 +55,38 @@ test("le texte est encodé pour une URL", () => {
   const text = decodeURIComponent(encoded ?? "");
   expect(text).toContain("Prénom : Gabriela");
   expect(url).not.toContain(" ");
+});
+
+test("WhatsApp est ouvert par un lien invisible et sécurisé, sans window.open", () => {
+  const click = mock(() => {});
+  const remove = mock(() => {});
+  const appendChild = mock(() => {});
+  const link = {
+    href: "",
+    target: "",
+    rel: "",
+    hidden: false,
+    style: { display: "" },
+    setAttribute: mock(() => {}),
+    click,
+    remove,
+  };
+  const doc = {
+    createElement: mock(() => link),
+    body: { appendChild },
+  } as unknown as Document;
+  const url = "https://wa.me/32455198283?text=Bonjour";
+
+  openWhatsAppUrl(url, doc);
+
+  expect(doc.createElement).toHaveBeenCalledWith("a");
+  expect(link.href).toBe(url);
+  expect(link.target).toBe("_blank");
+  expect(link.rel).toBe("noopener noreferrer");
+  expect(link.hidden).toBe(true);
+  expect(link.style.display).toBe("none");
+  expect(link.setAttribute).toHaveBeenCalledWith("aria-hidden", "true");
+  expect(appendChild).toHaveBeenCalledWith(link);
+  expect(click).toHaveBeenCalledTimes(1);
+  expect(remove).toHaveBeenCalledTimes(1);
 });

@@ -33,6 +33,7 @@ export function AppointmentForm({ defaultService = "" }: { defaultService?: stri
   const [consent, setConsent] = useState(false);
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const [whatsAppUrl, setWhatsAppUrl] = useState("");
   const [photoName, setPhotoName] = useState<string | null>(null);
 
   const onPhoto = (e: ChangeEvent<HTMLInputElement>) => {
@@ -70,7 +71,8 @@ export function AppointmentForm({ defaultService = "" }: { defaultService?: stri
     setErrors({});
     setSending(true);
     try {
-      submitAppointmentRequest({ ...parsed.data, photoName });
+      const result = submitAppointmentRequest({ ...parsed.data, photoName });
+      setWhatsAppUrl(result.url);
       setSent(true);
     } finally {
       setSending(false);
@@ -83,17 +85,25 @@ export function AppointmentForm({ defaultService = "" }: { defaultService?: stri
         <span className="mx-auto flex size-12 items-center justify-center rounded-full border border-champagne">
           <Check className="size-5" aria-hidden="true" />
         </span>
-        <h2 className="mt-8 text-3xl md:text-4xl">Votre demande est envoyée</h2>
+        <h2 className="mt-8 text-3xl md:text-4xl">Votre demande est prête</h2>
         <div className="rule-gold mx-auto mt-6" />
         <p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">
           Merci pour votre confiance. Votre récapitulatif s'est ouvert dans WhatsApp :
           il ne vous reste plus qu'à l'envoyer. Vous serez recontactée très prochainement
           afin de confirmer la date, l'horaire et la prestation souhaitée.
         </p>
-        <p className="mx-auto mt-4 max-w-md text-xs leading-relaxed text-muted-foreground">
-          La fenêtre ne s'est pas ouverte ? Copiez le texte de votre demande et
-          envoyez-le au {site.contact.phone}.
+        <p className="mx-auto mt-6 max-w-md text-xs leading-relaxed text-muted-foreground">
+          WhatsApp ne s'est pas ouvert ? Utilisez ce bouton pour envoyer votre demande
+          au {site.contact.phone}.
         </p>
+        <a
+          href={whatsAppUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-block bg-foreground px-10 py-4 text-[0.7rem] tracking-[0.24em] text-primary-foreground uppercase transition-opacity hover:opacity-90"
+        >
+          Ouvrir WhatsApp
+        </a>
       </div>
     );
   }

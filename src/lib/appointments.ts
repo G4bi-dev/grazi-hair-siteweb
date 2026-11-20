@@ -90,13 +90,26 @@ export function appointmentWhatsappUrl(request: AppointmentRequest): string {
 }
 
 /**
- * Ouvre la demande dans WhatsApp. Appelé de façon synchrone dans le handler
- * de soumission pour ne pas être bloqué par le filtre des nouvelles fenêtres.
+ * Ouvre WhatsApp avec un vrai lien cliqué pendant la soumission, plutôt qu'avec
+ * window.open(), afin de conserver le geste utilisateur sur Safari.
  */
+export function openWhatsAppUrl(url: string, doc: Document = document): void {
+  const link = doc.createElement("a");
+  link.href = url;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.hidden = true;
+  link.setAttribute("aria-hidden", "true");
+  link.style.display = "none";
+  doc.body.appendChild(link);
+  link.click();
+  link.remove();
+}
+
 export function submitAppointmentRequest(
   request: AppointmentRequest,
 ): { status: "pending"; url: string } {
   const url = appointmentWhatsappUrl(request);
-  window.open(url, "_blank", "noopener,noreferrer");
+  openWhatsAppUrl(url);
   return { status: "pending", url };
 }
