@@ -15,7 +15,7 @@ export const site = {
     city: "Belgique",
     instagram: "https://instagram.com/GRAZIHAIR01",
     instagramHandle: "@GRAZIHAIR01",
-    whatsapp: "https://wa.me/00000000000", // à remplacer
+    whatsapp: "https://wa.me/32455198283",
     mapsQuery: "Adresse à compléter",
   },
   hours: [

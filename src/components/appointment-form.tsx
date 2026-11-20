@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { services, timeSlots } from "@/data/site";
+import { services, site, timeSlots } from "@/data/site";
 import { submitAppointmentRequest } from "@/lib/appointments";
 import { cn } from "@/lib/utils";
 
@@ -39,7 +39,7 @@ export function AppointmentForm({ defaultService = "" }: { defaultService?: stri
     setPhotoName(e.target.files?.[0]?.name ?? null);
   };
 
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const raw = {
@@ -70,7 +70,7 @@ export function AppointmentForm({ defaultService = "" }: { defaultService?: stri
     setErrors({});
     setSending(true);
     try {
-      await submitAppointmentRequest({ ...parsed.data, photoName });
+      submitAppointmentRequest({ ...parsed.data, photoName });
       setSent(true);
     } finally {
       setSending(false);
@@ -86,9 +86,13 @@ export function AppointmentForm({ defaultService = "" }: { defaultService?: stri
         <h2 className="mt-8 text-3xl md:text-4xl">Votre demande est envoyée</h2>
         <div className="rule-gold mx-auto mt-6" />
         <p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">
-          Merci pour votre confiance. Votre demande de rendez-vous a bien été transmise.
-          Vous serez recontactée très prochainement afin de confirmer la date, l'horaire
-          et la prestation souhaitée.
+          Merci pour votre confiance. Votre récapitulatif s'est ouvert dans WhatsApp :
+          il ne vous reste plus qu'à l'envoyer. Vous serez recontactée très prochainement
+          afin de confirmer la date, l'horaire et la prestation souhaitée.
+        </p>
+        <p className="mx-auto mt-4 max-w-md text-xs leading-relaxed text-muted-foreground">
+          La fenêtre ne s'est pas ouverte ? Copiez le texte de votre demande et
+          envoyez-le au {site.contact.phone}.
         </p>
       </div>
     );
@@ -213,7 +217,7 @@ export function AppointmentForm({ defaultService = "" }: { defaultService?: stri
         disabled={sending}
         className="w-full bg-foreground py-4 text-[0.7rem] tracking-[0.24em] text-primary-foreground uppercase transition-opacity hover:opacity-90 disabled:opacity-60 sm:w-auto sm:px-14"
       >
-        {sending ? "Envoi en cours…" : "Envoyer ma demande"}
+        {sending ? "Ouverture de WhatsApp…" : "Envoyer ma demande"}
       </button>
 
       <p className="text-xs leading-relaxed text-muted-foreground">
