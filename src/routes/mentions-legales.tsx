@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/page-header";
-import { site } from "@/data/site";
 
 export const Route = createFileRoute("/mentions-legales")({
   head: () => ({
@@ -33,9 +32,15 @@ function LegalPage() {
         <div className="space-y-10">
           <div>
             <h2 className="text-xl text-foreground">Éditeur du site</h2>
-            <p className="mt-3">
-              {site.name} — informations d'identification à compléter (statut, numéro
-              d'entreprise, adresse du siège).
+            <p className="mt-3">Gabriela Reis</p>
+            <p className="mt-2">
+              Contact pour projet :{" "}
+              <a
+                href="mailto:gabriela.rdosreis@hotmail.com"
+                className="text-foreground underline underline-offset-4 transition-opacity hover:opacity-70"
+              >
+                gabriela.rdosreis@hotmail.com
+              </a>
             </p>
           </div>
           <div>
