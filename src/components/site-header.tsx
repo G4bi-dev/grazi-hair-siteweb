@@ -2,6 +2,8 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { site } from "@/data/site";
+import logoAsset from "@/assets/grazi-logo.png.asset.json";
+import monogramAsset from "@/assets/grazi-monogram.png.asset.json";
 import { cn } from "@/lib/utils";
 
 const nav = [
@@ -41,17 +43,23 @@ export function SiteHeader() {
     >
       <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 md:px-10 md:py-5">
         <Link to="/" className="min-w-0" aria-label={`${site.name} — accueil`}>
-          <span className="block truncate font-display text-xl tracking-[0.18em] uppercase sm:text-2xl">
-            {site.name}
-          </span>
-          <span
+          <img
+            src={monogramAsset.url}
+            alt={site.name}
+            width={40}
+            height={41}
+            className="h-10 w-auto lg:hidden"
+          />
+          <img
+            src={logoAsset.url}
+            alt={site.name}
+            width={220}
+            height={48}
             className={cn(
-              "mt-0.5 hidden text-[0.6rem] tracking-[0.3em] uppercase sm:block",
-              overlay ? "text-primary-foreground/75" : "text-muted-foreground",
+              "hidden h-9 w-auto transition-[filter] duration-700 lg:block xl:h-10",
+              overlay && "brightness-0 invert",
             )}
-          >
-            {site.tagline}
-          </span>
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">

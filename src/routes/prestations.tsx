@@ -3,6 +3,7 @@ import { PageHeader } from "@/components/page-header";
 import { Reveal } from "@/components/reveal";
 import { ServiceCard } from "@/components/service-card";
 import { services } from "@/data/site";
+import monogramAsset from "@/assets/grazi-monogram.png.asset.json";
 
 export const Route = createFileRoute("/prestations")({
   head: () => ({
@@ -41,6 +42,12 @@ function PrestationsPage() {
           {services.map((service, i) => (
             <ServiceCard key={service.id} service={service} delay={(i % 3) * 100} />
           ))}
+        </div>
+
+        <div className="mt-20 flex items-center justify-center gap-6" aria-hidden="true">
+          <span className="h-px w-16 bg-champagne/70 md:w-24" />
+          <img src={monogramAsset.url} alt="" width={44} height={45} loading="lazy" className="h-11 w-auto" />
+          <span className="h-px w-16 bg-champagne/70 md:w-24" />
         </div>
 
         <Reveal className="mt-16 border border-border/70 bg-secondary/60 px-6 py-12 text-center md:px-16">

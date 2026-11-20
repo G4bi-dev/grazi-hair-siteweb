@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram } from "lucide-react";
 import { site } from "@/data/site";
+import logoAsset from "@/assets/grazi-logo.png.asset.json";
 
 const nav = [
   { to: "/prestations", label: "Prestations" },
@@ -16,7 +17,7 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-5 py-14 md:px-10 md:py-20">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <p className="font-display text-2xl tracking-[0.18em] uppercase">{site.name}</p>
+            <img src={logoAsset.url} alt={site.name} width={200} height={44} loading="lazy" className="h-10 w-auto" />
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
               {site.baseline}
             </p>
