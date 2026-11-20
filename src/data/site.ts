@@ -10,7 +10,7 @@ export const site = {
     "L'art du blond lumineux et des couleurs sur-mesure, pensé pour révéler votre naturel.",
   contact: {
     phone: "+32 455 198 283",
-    email: "",
+    email: "info@grazihair.com",
     address: "Bruxelles",
     city: "Belgique",
     instagram: "https://instagram.com/GRAZIHAIR01",
