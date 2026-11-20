@@ -74,6 +74,7 @@ export function SiteFooter() {
           <Link to="/mentions-legales" className="hover:text-foreground">
             Mentions légales & confidentialité
           </Link>
+          <p>Créé et designé par Gabriela Reis</p>
         </div>
       </div>
     </footer>
