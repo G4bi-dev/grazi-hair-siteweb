@@ -42,8 +42,8 @@ export const services: Service[] = [
     name: "Balayage sur-mesure",
     description:
       "Éclaircissement à main levée pour un dégradé lumineux et naturel, adapté à votre base et à votre carnation.",
-    duration: "À confirmer",
-    price: "Sur devis",
+    duration: "3 h à 4 h",
+    price: "À partir de 130 €",
     category: "Blond",
   },
   {
@@ -51,8 +51,8 @@ export const services: Service[] = [
     name: "Mèches blondes",
     description:
       "Travail de mèches fines pour un blond dimensionnel, éclatant et facile à entretenir.",
-    duration: "À confirmer",
-    price: "Sur devis",
+    duration: "2 h 30 à 3 h 30",
+    price: "À partir de 120 €",
     category: "Blond",
   },
   {
@@ -60,8 +60,8 @@ export const services: Service[] = [
     name: "Blond polaire / éclaircissement",
     description:
       "Passage au blond froid avec protection de la fibre et patine personnalisée.",
-    duration: "À confirmer",
-    price: "Sur devis",
+    duration: "4 h à 6 h",
+    price: "À partir de 180 €",
     category: "Blond",
   },
   {
@@ -69,8 +69,8 @@ export const services: Service[] = [
     name: "Coloration",
     description:
       "Couleur racines ou coloration complète, nuance composée sur-mesure pour un résultat profond et brillant.",
-    duration: "À confirmer",
-    price: "Sur devis",
+    duration: "1 h 30 à 2 h",
+    price: "À partir de 55 €",
     category: "Coloration",
   },
   {
@@ -78,8 +78,8 @@ export const services: Service[] = [
     name: "Patine & gloss",
     description:
       "Raviver les reflets, neutraliser les tons jaunes et offrir une brillance miroir.",
-    duration: "À confirmer",
-    price: "Sur devis",
+    duration: "45 min à 1 h 15",
+    price: "À partir de 40 €",
     category: "Coloration",
   },
   {
@@ -87,8 +87,8 @@ export const services: Service[] = [
     name: "Ombré Hair",
     description:
       "Dégradé subtil de racines à pointes pour un effet naturel, sophistiqué et facile à entretenir.",
-    duration: "À confirmer",
-    price: "Sur devis",
+    duration: "3 h à 4 h",
+    price: "À partir de 150 €",
     category: "Coloration",
   },
   {
@@ -96,8 +96,8 @@ export const services: Service[] = [
     name: "Correction de couleur",
     description:
       "Correction technique des accidents de couleur : bouchés, bandes, reflets indésirables ou cheveux trop clairs.",
-    duration: "À confirmer",
-    price: "Sur devis",
+    duration: "3 h à 6 h",
+    price: "À partir de 180 € · sur devis",
     category: "Coloration",
   },
   {
@@ -105,8 +105,8 @@ export const services: Service[] = [
     name: "Lissage brésilien",
     description:
       "Lissage semi-permanent à la kératine pour discipliner la fibre, réduire le volume et sublimer la brillance.",
-    duration: "À confirmer",
-    price: "Sur devis",
+    duration: "2 h 30 à 4 h",
+    price: "À partir de 160 €",
     category: "Soin & coupe",
   },
   {
@@ -114,8 +114,8 @@ export const services: Service[] = [
     name: "Botox capillaire",
     description:
       "Soin profond réparateur qui nourrit, restructure et illumine les cheveux abîmés ou ternes.",
-    duration: "À confirmer",
-    price: "Sur devis",
+    duration: "1 h 30 à 2 h 30",
+    price: "À partir de 70 €",
     category: "Soin & coupe",
   },
 ];

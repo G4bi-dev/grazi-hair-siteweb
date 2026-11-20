@@ -33,7 +33,7 @@ function PrestationsPage() {
       <PageHeader
         eyebrow="Prestations"
         title="Des prestations sur-mesure"
-        intro="Chaque rendez-vous commence par un diagnostic personnalisé. Les durées et tarifs indiqués sont provisoires et seront confirmés lors de la prise de contact."
+        intro="Chaque rendez-vous commence par un diagnostic personnalisé. Les tarifs et durées sont indicatifs : ils peuvent varier selon la longueur, l'épaisseur et l'état des cheveux, et sont confirmés après diagnostic."
       />
 
       <section className="mx-auto max-w-7xl px-5 pb-24 md:px-10 md:pb-32">
